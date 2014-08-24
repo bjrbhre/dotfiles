@@ -20,7 +20,7 @@ alias lss="ls -hsS"
 alias ml="ls -ltr"
 
 # VNC
-alias vnc="vncserver :$VNC_PORT -depth 16 -geometry $GEOMETRY" #-name QVIDKRO1"
+alias vnc="vncserver :$VNC_PORT -depth 16 -geometry $VNC_GEOMETRY" #-name $VNC_NAME"
 alias vnck="vncserver -kill :$VNC_PORT"
 # Checking open vnc ports
 alias vncports="ps -ef | grep vnc | cut -c 1-9,54-56 | sort +4 -t ':'"
@@ -35,7 +35,7 @@ alias vgrind='valgrind --tool=memcheck --leak-check=yes --show-reachable=yes -v'
 alias doPurify='valgrind --tool=memcheck -v --log-file=memcheck.log --leak-check=full --leak-resolution=med --show-reachable=yes --error-limit=no'
 alias cgrind='valgrind --tool=callgrind --dump-instr=yes --combine-dumps=yes --collect-jumps=yes --collect-systime=yes'
 
-# Miscelaneous tricks and shortcuts
+# Miscellaneous tricks and shortcuts
 alias xd='cd ..'
 alias df="df -h"
 alias vi='vim'
@@ -48,6 +48,19 @@ alias igrep='grep -i'
 alias rsync_dir='rsync -rvnc'
 alias bc="bc -lq"
 alias j='jobs'
+
+###########################################################################
+#                               FUNCTIONS                                ##
+###########################################################################
+function csv_header() {
+	delim=$2
+	[ ! -z "$delim" ] || delim=';'
+	for t in $(head -n 1 $1 | sed "s:$delim: :g");do echo $t;done | nl
+}
+
+function hopen {
+	open "http://$1"
+}
 
 ###########################################################################
 #                             Git specific                               ##
@@ -76,15 +89,11 @@ function parse_git_branch_and_add_brackets {
 }
 
 ###########################################################################
-#                             MongoDB/MongoHQ                            ##
+#                                 MongoDB                                ##
 ###########################################################################
-
+# md = mongod with overwritten dbpath using MONGO_DBPATH env variable
 function md {
-	if [ "x$MONGO_DBPATH" != "x" ];then
-		echo mongod --dbpath $MONGO_DBPATH
-	else
-		echo mongod
-	fi
+	[ ! -z "$MONGO_DBPATH" ] && mongod --dbpath $MONGO_DBPATH $@ || mongod $@
 }
 
 function mongo_wrapper {
@@ -170,18 +179,3 @@ alias hrake='heroku run bundle exec rake'
 ###########################################################################
 alias PSQL='PGPASSWORD=$DWH_PASSWORD psql -h $DWH_HOST -U $DWH_USERNAME -p $DWH_PORT -d $DWH_DB'
 
-###########################################################################
-#                               FUNCTIONS                                ##
-###########################################################################
-function csv_header() {
-	delim=$2
-	if test -z $delim
-	then
-		delim=';'
-	fi
-	for t in $(head -n 1 $1 | sed "s:$delim: :g");do echo $t;done | nl
-}
-
-function hopen {
-	open "http://$1"
-}
