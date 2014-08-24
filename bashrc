@@ -13,7 +13,7 @@ ENV_FILES="$ENV_DIR/bash_aliases \
            $ENV_DIR/user.env \
            $ENV_DIR/config.env \
            $(ls $ENV_DIR/private/*.env)"
-for f in $ENV_FILES;do [ -r $f ] && echo source $f;done
+for f in $ENV_FILES;do [ -r $f ] && source $f;done
 
 ###########################################################################
 #                            Bash  settings                              ##
