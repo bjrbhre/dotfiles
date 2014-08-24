@@ -1,0 +1,25 @@
+[user]
+	name = Pierre Beauhaire
+	email = bjr@bhre.me
+[core]
+	editor = vi
+	excludesfile = /Users/pierre/.gitignore_global
+[color]
+	ui = true
+	diff = auto
+	status = auto
+	branch = auto
+[alias]
+	st = status
+	br = branch
+	ci = commit
+	co = checkout
+	unstage = reset HEAD
+[push]
+	default = current
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
