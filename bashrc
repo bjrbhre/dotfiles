@@ -1,47 +1,26 @@
 ###########################################################################
-#                    The bashrc of the platform                          ##
+#                            Bash config file                            ##
 ###########################################################################
+# Sourcing env files in appropriate order:
+# 0 - aliases and functions
+# 1 - platform-specific variables
+# 2 - user-specific variables
+# 3 - config (uses user.env and platform.env)
+# 4 - private env files
 ENV_DIR=$HOME/env
-test -e $ENV_DIR/bash_variables && source $ENV_DIR/bash_variables
-test -e $ENV_DIR/bash_aliases && source $ENV_DIR/bash_aliases
-###########################################################################
+ENV_FILES="$ENV_DIR/bash_aliases \
+           $ENV_DIR/platform.env \
+           $ENV_DIR/user.env \
+           $ENV_DIR/config.env \
+           $(ls $ENV_DIR/private/*.env)"
+for f in $ENV_FILES;do [ -r $f ] && echo source $f;done
 
 ###########################################################################
-#                         Standard  settings                             ##
+#                            Bash  settings                              ##
 ###########################################################################
-EDITOR=$GTK_DIR/bin/vim
-XEDITOR=$GTK_DIR/bin/gvim
-CVSEDITOR=$GTK_DIR/bin/vim
-export EDITOR XEDITOR CVSEDITOR
-# Action of interactive shell when EOF is the sole input
+# How many times EOF / ctrl-D is ignored before shell is closed
 IGNOREEOF=1
 
-# History on several terminals
-shopt -s histappend
-#ulimit -c unlimited
-
-###########################################################################
-#                             Terminal display                           ##
-###########################################################################
-# Layout of the shell command invite
-if [ $USER != "root" ] 
-then 
-	PS1='\[\033[1;30m\](\[\033[1;32m\]\u\[\033[1;30m\]@\[\033[0;36m\]\h\[\033[1;30m\])*(\[\033[0;36m\]\A\[\033[1;30m\])*(\[\033[0;36m\]\j\[\033[1;30m\])(\[\033[0;36m\]\w$(parse_git_branch_and_add_brackets)\[\033[1;30m\])\n\[\033[1;30m\](\[\033[0;36m\]$\[\033[1;30m\])\[\033[0m\]'
-else 
-	PS1='\[\033[1;30m\](\[\033[1;31m\]\u\[\033[1;30m\]@\[\033[0;36m\]\h\[\033[1;30m\])*(\[\033[0;36m\]\A\[\033[1;30m\])*(\[\033[0;36m\]\j\[\033[1;30m\])(\[\033[0;36m\]\w\[\033[1;30m\])\n\[\033[1;30m\](\[\033[0;36m\]$\[\033[1;30m\])\[\033[0m\]'
-fi
-export PS1
-export LS_COLORS=
-
-export BREW_HOME="/usr/local"
-export PATH=$BREW_HOME/bin:$PATH
-
-export RVM_HOME="$HOME/.rvm"
-export PATH=$RVM_HOME/bin:$PATH
-
-if [[ -s $RVM_HOME/scripts/rvm ]]; then
-	  source $RVM_HOME/scripts/rvm;
-fi
-
-export PATH=$HOME/bin:$PATH:$GOPATH/bin
+# Shell options (type `shopt` to list all settable options)
+shopt -s histappend # History on several terminals
 
