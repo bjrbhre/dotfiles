@@ -12,11 +12,7 @@ alias mv='mv -i'
 alias cp='cp -i'
 
 # listing files
-if [ "$(uname)" = "Darwin" ];then
-	alias ls="ls -CFG"
-else
-	alias ls="ls --color"
-fi
+alias ls="ls --color"
 alias ll="ls -l"
 alias llh="ls -lh"
 alias lla="ls -la"
@@ -45,13 +41,18 @@ alias df="df -h"
 alias vi='vim'
 # date with YYYY-MM-DD format
 alias today='date +%Y-%m-%d'
-alias md5sum='md5'
 alias h='history|grep'
 # case insensitive grep
 alias igrep='grep -i'
 alias rsync_dir='rsync -rvnc'
 alias bc="bc -lq"
 alias j='jobs'
+
+# Darwin specific
+if [ "$(uname)" = "Darwin" ];then
+	alias ls="ls -CFG"
+	alias md5sum='md5'
+fi
 
 ###########################################################################
 #                               FUNCTIONS                                ##
