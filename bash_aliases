@@ -12,7 +12,11 @@ alias mv='mv -i'
 alias cp='cp -i'
 
 # listing files
-alias ls="ls -CFG"
+if [ "$(uname)" = "Darwin" ];then
+	alias ls="ls -CFG"
+else
+	alias ls="ls --color"
+fi
 alias ll="ls -l"
 alias llh="ls -lh"
 alias lla="ls -la"
