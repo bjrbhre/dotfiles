@@ -183,4 +183,3 @@ alias hrake='heroku run bundle exec rake'
 #                             PLSQL Connection                           ##
 ###########################################################################
 alias PSQL='PGPASSWORD=$DWH_PASSWORD psql -h $DWH_HOST -U $DWH_USERNAME -p $DWH_PORT -d $DWH_DB'
-

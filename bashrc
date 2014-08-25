@@ -23,4 +23,3 @@ IGNOREEOF=1
 
 # Shell options (type `shopt` to list all settable options)
 shopt -s histappend # History on several terminals
-

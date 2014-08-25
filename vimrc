@@ -34,7 +34,7 @@ au BufNewFile,BufRead *.xml,*.htm,*.html set foldmethod=indent foldlevel=12
 autocmd BufRead,BufNewFile *.pig set filetype=pig
 " colorscheme darkrobot
 colorscheme desert
-set tags=TAGS;~ 
+set tags=TAGS;~
 " $MILORD/debug/TAGS,$OUTILSRO/debug/TAGS
 "set makeprg=cd\ ../../debug/&&gmake\ -j2
 
@@ -99,7 +99,7 @@ set nocompatible
 " set guifontset=lucindasans-10
 set guifont=Fixed\ 10
 " set guifont=-b&h-lucidatypewriter-medium-r-normal-*-*-140-*-*-m-*-iso8859-1
-" set guifont=-b&h-lucida\ sans\ typewriter-medium-r-normal-*-*-120-*-*-m-*-iso8859-1  
+" set guifont=-b&h-lucida\ sans\ typewriter-medium-r-normal-*-*-120-*-*-m-*-iso8859-1
 set bs=2		" allow backspacing over everything in insert mode
 set ai			" always set autoindenting on
 set nobackup		" keep a backup file
@@ -210,4 +210,3 @@ autocmd BufReadPost * if line("'\"") && line("'\"") <= line("$") | exe "normal `
 endif
 
 endif " has("autocmd")
-
