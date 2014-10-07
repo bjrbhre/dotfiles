@@ -1,7 +1,11 @@
 #!/bin/sh
 
 brew install bash
+brew install boot2docker
+brew install docker
+brew install fig
 brew install git
+brew install go
 brew install htop-osx
 brew install mongo
 brew install wget
@@ -10,7 +14,6 @@ brew tap caskroom/cask
 brew install brew-cask
 
 brew cask install alfred
-brew cask install boot2docker
 brew cask install box-sync
 brew cask install dropbox
 brew cask install google-chrome
