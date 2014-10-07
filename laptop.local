@@ -2,6 +2,7 @@
 
 brew install bash
 brew install git
+brew install htop-osx
 brew install mongo
 brew install wget
 
@@ -9,6 +10,7 @@ brew tap caskroom/cask
 brew install brew-cask
 
 brew cask install alfred
+brew cask install boot2docker
 brew cask install box-sync
 brew cask install dropbox
 brew cask install google-chrome
@@ -24,3 +26,4 @@ brew cask install onepassword
 brew cask install skype
 brew cask install sublime-text
 brew cask install transmit
+brew cask install virtualbox
