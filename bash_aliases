@@ -67,9 +67,39 @@ function hopen {
 	open "http://$1"
 }
 
+# line sep
+sep() { cat << EOF
+------------------------------------------------------------
+EOF
+}
+
+# demo = cat file before execution
+demo() {
+	sep
+	cat $1
+	sep
+	if [ -x $1 ];then
+		read -p "Press any key to continue..."
+		$@
+	else
+		echo "file not executable [$1]"
+	fi
+}
+
+###########################################################################
+#                           Docker specific                              ##
+###########################################################################
+drm() { docker rm $(docker ps -q -a); }
+dri() { docker rmi $(docker images -q); }
+alias dps='docker ps -a'
+alias dip="docker inspect --format '{{ .NetworkSettings.IPAddress }}'"
+alias db='docker build -t $(repo) .'
+alias dr='docker run --rm -t -i $(repo)'
+
 ###########################################################################
 #                             Git specific                               ##
 ###########################################################################
+alias repo='echo "$GITHUB_USER/$(basename $(pwd))"'
 alias gb='git branch'
 alias gba='git branch -a'
 alias gst='git status'
