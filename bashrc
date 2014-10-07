@@ -7,7 +7,7 @@
 # 2 - user-specific variables
 # 3 - config (uses user.env and platform.env)
 # 4 - private env files
-ENV_DIR=$HOME/dotfiles
+ENV_DIR=$HOME/.dotfiles
 ENV_FILES="$ENV_DIR/bash_aliases \
            $ENV_DIR/platform.env \
            $ENV_DIR/user.env \
