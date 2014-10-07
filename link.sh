@@ -7,8 +7,9 @@ dotfiles=" bashrc \
            laptop.local \
            rspec \
            vimrc \
-		   zshrc "
+           zshrc "
 
 for file in $dotfiles;do
+  unlink $HOME/.${file}
   ln -s $env_dir/$file $HOME/.${file}
 done
