@@ -86,8 +86,9 @@ demo() {
 	cat $1
 	line_sep
 	if [ -x $1 ];then
-		read -p "Press any key to continue..."
-		$@
+    echo -n "Execute file? (y/n)..."
+    read REPLY # does it work for bash?
+    [[ $REPLY =~ ^[Yy]$ ]] && $@ || echo "exit"
 	else
 		echo "file not executable [$1]"
 	fi
