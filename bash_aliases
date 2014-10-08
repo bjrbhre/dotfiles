@@ -67,17 +67,24 @@ function hopen {
 	open "http://$1"
 }
 
-# line sep
-sep() { cat << EOF
+fancy_echo() {
+  printf "%b" "$1"
+}
+
+test_command() {
+  type $1 1>/dev/null 2>&1 || { echo >&2 "No such file [ $1 ]"; exit 1; }
+}
+
+line_sep() { cat << EOF
 ------------------------------------------------------------
 EOF
 }
 
 # demo = cat file before execution
 demo() {
-	sep
+	line_sep
 	cat $1
-	sep
+	line_sep
 	if [ -x $1 ];then
 		read -p "Press any key to continue..."
 		$@
