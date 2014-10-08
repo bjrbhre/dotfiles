@@ -1,6 +1,8 @@
 #! /usr/bin/env sh
 
 #======= SETTINGS =======#
+OH_MY_ZSH_REPO=https://github.com/robbyrussell/oh-my-zsh.git
+OH_MY_ZSH_DIR=$HOME/.oh-my-zsh
 DOTFILES_REPO=https://github.com/bjrbhre/dotfiles.git
 DOTFILES=$HOME/.dotfiles
 SSH_KEY=$HOME/.ssh/id_rsa
@@ -28,6 +30,8 @@ fi
 
 # 2. clone and link dotfiles
 test_command git
+fancy_echo "Checking oh-my-zsh directory [ $OH_MY_ZSH_DIR ]..."
+[ -d $OH_MY_ZSH_REPO ] && echo "OK" || git clone $OH_MY_ZSH_REPO $OH_MY_ZSH_DIR
 fancy_echo "Checking dotfiles directory [ $DOTFILES ]..."
 [ -d $DOTFILES ] && echo "OK" || git clone $DOTFILES_REPO $DOTFILES
 fancy_echo "Linking dotfiles... "
