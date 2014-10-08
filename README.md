@@ -1,31 +1,28 @@
-# Setup Mac OS X
+# Dotfiles
 
-## 1. Software update
-Open appstore and make sure Mac OS is up to date.
- 
-## 2. Dotfiles and scripts
-Retrieve dotfiles by cloning git repo:
+## System Setup
 
-```
-git clone git@github.com:bjrbhre/dotfiles.git
-./dotfiles/link.sh
-```
+### 1. install.sh
 
-**IMPORTANT** This directory is also synced through Dropbox.
-
-**TODO** How should I use rcm?
-
-## 4. Install Softwares
-
-### 4.1 Using laptop.sh
-
-Use [laptop.sh](https://github.com/thoughtbot/laptop) which can run your `~/.laptop.local` if it exists:
+`install.sh` script helps setting up a new system from scratch.
+Dowload and execute:
 
 ```
-bash <(curl -s https://raw.githubusercontent.com/thoughtbot/laptop/master/mac) 2>&1 | tee ~/laptop.log
+curl -s https://raw.githubusercontent.com/bjrbhre/dotfiles/master/install.sh | sh
 ```
 
-### 4.2 From AppStore
+TODO use token for private repo access (see [here](https://gist.github.com/Integralist/9482061))
+
+What is does:
+
+1. update system software
+2. clone and link dotfiles (entire repo)
+3. install sofware using [laptop.sh](https://github.com/thoughtbot/laptop)
+4. create ssh key
+
+### 2. AppStore
+
+Following apps can only be downloaded through Mac AppStore:
 
 + double pane
 + broom
@@ -34,8 +31,9 @@ bash <(curl -s https://raw.githubusercontent.com/thoughtbot/laptop/master/mac) 2
 + growl
 
 
-## 3. Settings
-**TODO** Script those settings using `defaults write...`
+### 3. Settings
+
+Following settings must be set manually:
 
 + install sublimetext package manager see [here](https://sublime.wbond.net/installation)
 + change sublimetext icns [here](http://code.tutsplus.com/tutorials/sublime-text-2-tips-and-tricks-updated--net-21519)
@@ -54,9 +52,7 @@ bash <(curl -s https://raw.githubusercontent.com/thoughtbot/laptop/master/mac) 2
 + account profile picture
 + time format for clock
 
-## 2. SSH Key
-Retrieve ssh key or generate a new one:
+## TODO
 
-```
-ssh-keygen -f ~/.ssh/id_rsa -N "" # -C "me@example.com"
-```
++ Script settings using `defaults write...`
++ Use rcm to manage dotfiles?
