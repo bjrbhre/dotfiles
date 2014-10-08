@@ -1,1 +1,1 @@
-bashrc
+shell_config
