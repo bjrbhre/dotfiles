@@ -11,8 +11,9 @@
 set incsearch
 set mouse=a
 set nowrap
-set sw=4
-set ts=4
+set sw=2
+set ts=2
+set expandtab
 set ignorecase
 set smartcase
 set modelines=0
