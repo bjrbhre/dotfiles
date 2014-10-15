@@ -10,6 +10,6 @@ dotfiles=" bashrc \
            zshrc "
 
 for file in $dotfiles;do
-  unlink $HOME/.${file}
+  [ -s "$HOME/.${file}" ] && unlink $HOME/.${file}
   ln -s $env_dir/$file $HOME/.${file}
 done
