@@ -1,4 +1,4 @@
-#! /usr/bin/env sh
+#! /usr/bin/env bash
 
 #======= SETTINGS =======#
 OH_MY_ZSH_REPO=https://github.com/robbyrussell/oh-my-zsh.git
@@ -27,11 +27,21 @@ if [ "$(uname)" = "Darwin" ];then
 else
   sudo apt-get update -y
 fi
+# 1.1 installing xcode command line tools
+developer_dir=$(xcode-select -print-path 2>/dev/null)
+if [ "x" = "x$developer_dir" ];then
+  fancy_echo "Installing the Command Line Tools (expect a GUI popup)...\n"
+  sudo xcode-select --install
+  fancy_echo "Press any key when the installation has completed..."
+  read text
+else
+  fancy_echo "Command Line Tools already installed.\n"
+fi
 
 # 2. clone and link dotfiles
 test_command git
 fancy_echo "Checking oh-my-zsh directory [ $OH_MY_ZSH_DIR ]..."
-[ -d $OH_MY_ZSH_REPO ] && echo "OK" || git clone $OH_MY_ZSH_REPO $OH_MY_ZSH_DIR
+[ -d $OH_MY_ZSH_DIR ] && echo "OK" || git clone $OH_MY_ZSH_REPO $OH_MY_ZSH_DIR
 fancy_echo "Checking dotfiles directory [ $DOTFILES ]..."
 [ -d $DOTFILES ] && echo "OK" || git clone $DOTFILES_REPO $DOTFILES
 fancy_echo "Linking dotfiles... "
