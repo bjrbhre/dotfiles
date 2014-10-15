@@ -56,3 +56,4 @@ Following settings must be set manually:
 
 + Script settings using `defaults write...`
 + Use rcm to manage dotfiles?
++ Fix config.env when rbenv not installed
