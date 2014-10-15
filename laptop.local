@@ -7,7 +7,6 @@ brew install fig
 brew install git
 brew install go
 brew install htop-osx
-brew install mongo
 brew install wget
 
 brew tap caskroom/cask
