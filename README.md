@@ -35,8 +35,13 @@ Following apps can only be downloaded through Mac AppStore:
 
 Following settings must be set manually:
 
-+ install sublimetext package manager see [here](https://sublime.wbond.net/installation)
++ install sublimetext package manager see [here](https://sublime.wbond.net/installation) and install
+  + CoffeeScript
+  + Dockerfile Syntax Highlighting
 + change sublimetext icns [here](http://code.tutsplus.com/tutorials/sublime-text-2-tips-and-tricks-updated--net-21519)
++ add sublime text preferences:
+  + "ensure_newline_at_eof_on_save": true
+  + "trim_trailing_white_space_on_save": true
 + iterm mapping for 'option+left/right' [here](https://coderwall.com/p/h6yfda)
 + set name / hostname (in settings)
 + deactivate timemachine
@@ -51,6 +56,11 @@ Following settings must be set manually:
 + deactive guest account
 + account profile picture
 + time format for clock
++ internet accounts:
+  + google
+  + twitter
+  + facebook
+  + linkedin
 
 ## TODO
 
