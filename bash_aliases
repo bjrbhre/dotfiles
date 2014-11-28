@@ -48,6 +48,9 @@ alias rsync_dir='rsync -rvnc'
 alias bc="bc -lq"
 alias j='jobs'
 
+# python
+alias venv='source venv/bin/activate'
+
 # Darwin specific
 if [ "$(uname)" = "Darwin" ];then
 	alias ls="ls -CFG"
