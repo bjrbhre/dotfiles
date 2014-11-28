@@ -1,12 +1,17 @@
 #!/bin/sh
 
+brew install awscli
 brew install bash
 brew install boot2docker
 brew install docker
 brew install fig
+brew install gcc
 brew install git
 brew install go
 brew install htop-osx
+brew install mongo
+brew install python
+brew install python3
 brew install wget
 
 brew tap caskroom/cask
@@ -14,6 +19,7 @@ brew install brew-cask
 
 brew cask install alfred
 brew cask install box-sync
+brew cask install ccmenu
 brew cask install dropbox
 brew cask install flash-player
 brew cask install google-chrome
@@ -23,6 +29,7 @@ brew cask install iterm2
 brew cask install java
 brew cask install keepassx
 brew cask install kaleidoscope
+brew cask install mailbox
 brew cask install menumeters
 brew cask install mou
 brew cask install onepassword
@@ -30,3 +37,20 @@ brew cask install skype
 brew cask install sublime-text
 brew cask install transmit
 brew cask install virtualbox
+
+# python
+pip install virtualenv
+# virtualenv ~/.venv/dev
+# source ~/.venv/dev/bin/activate
+
+pip install ipython
+pip install nose
+pip install nosegrowl2
+pip install pep8
+pip install pylint
+pip install pyyaml
+pip install regex
+pip install tdaemon
+pip install tox
+
+# deactivate # virtualenv
