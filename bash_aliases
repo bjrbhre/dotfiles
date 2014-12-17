@@ -5,6 +5,8 @@
 # Quick edit/sourcing of bashrc
 alias vbashrc='vi $HOME/.bashrc'
 alias s="source $HOME/.bashrc"
+[ "x$BASH_VERSION" != "x" ] && alias s='source $HOME/.bashrc'
+[ "x$ZSH_VERSION" != "x" ]  && alias s='source $HOME/.zshrc'
 
 # secure file manipulation
 alias rm='rm -i'
