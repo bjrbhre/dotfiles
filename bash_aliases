@@ -51,6 +51,9 @@ alias j='jobs'
 # python
 alias venv='source venv/bin/activate'
 
+# ruby
+alias be='bundle exec'
+
 # Darwin specific
 if [ "$(uname)" = "Darwin" ];then
 	alias ls="ls -CFG"
