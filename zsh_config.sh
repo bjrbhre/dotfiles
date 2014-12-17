@@ -1,3 +1,4 @@
+# zsh-specific config
 setopt inc_append_history
 setopt share_history
 
