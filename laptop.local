@@ -12,6 +12,8 @@ brew install htop-osx
 brew install mongo
 brew install python
 brew install python3
+brew install terminal-notifier
+brew install tig
 brew install wget
 
 brew tap caskroom/cask
