@@ -8,10 +8,12 @@
 # 3 - config (uses user.env and platform.env)
 # 4 - private env files
 ENV_DIR=$HOME/.dotfiles
+CREDENTIALS_DIR=$HOME/.ssh/credentials
 ENV_FILES="$ENV_DIR/bash_aliases \
            $ENV_DIR/platform.env \
            $ENV_DIR/user.env \
            $ENV_DIR/config.env"
 [ -d $ENV_DIR/private ] && ENV_FILES="$ENV_FILES $(ls $ENV_DIR/private/*.env)"
+[ -d $CREDENTIALS_DIR ] && ENV_FILES="$ENV_FILES $(ls $CREDENTIALS_DIR/*.env)"
 for f in $(echo "$ENV_FILES");do [ -r $f ] && source $f;done
 
