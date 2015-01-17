@@ -4,14 +4,18 @@ brew install awscli
 brew install bash
 brew install boot2docker
 brew install docker
+brew install dos2unix
+brew install exiftool
 brew install fig
 brew install gcc
 brew install git
 brew install go
 brew install htop-osx
 brew install mongo
+brew install pkg-config
 brew install python
 brew install python3
+brew install rabbitmq
 brew install terminal-notifier
 brew install tig
 brew install wget
@@ -26,6 +30,7 @@ brew cask install dropbox
 brew cask install flash-player
 brew cask install google-chrome
 brew cask install google-drive
+# brew cask install google-web-designer
 brew cask install hipchat
 brew cask install iterm2
 brew cask install java
