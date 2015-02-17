@@ -1,6 +1,7 @@
 # zsh-specific config
 setopt inc_append_history
 setopt share_history
+eval "$(direnv hook zsh)"
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh

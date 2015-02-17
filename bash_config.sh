@@ -9,3 +9,4 @@ export PS1
 export LS_COLORS=
 # Shell options (bash: type `shopt` to list all settable options)
 shopt -s histappend # History on several terminals
+eval "$(direnv hook bash)"
