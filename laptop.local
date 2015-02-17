@@ -1,8 +1,10 @@
 #!/bin/sh
 
+brew install arp-scan
 brew install awscli
 brew install bash
 brew install boot2docker
+brew install direnv
 brew install docker
 brew install dos2unix
 brew install exiftool
@@ -10,12 +12,15 @@ brew install fig
 brew install gcc
 brew install git
 brew install go
+brew install gpg2
 brew install htop-osx
 brew install mongo
+brew install postgresql
 brew install pkg-config
 brew install python
 brew install python3
 brew install rabbitmq
+brew install gnu-sed --with-default-names
 brew install terminal-notifier
 brew install tig
 brew install wget
@@ -26,6 +31,7 @@ brew install brew-cask
 brew cask install alfred
 brew cask install box-sync
 brew cask install ccmenu
+brew cask install deezer
 brew cask install dropbox
 brew cask install flash-player
 brew cask install google-chrome
@@ -61,3 +67,10 @@ pip install tdaemon
 pip install tox
 
 # deactivate # virtualenv
+
+# gem
+gem install genghisapp
+
+# bower
+npm install -g bower
+npm install -g gulp
