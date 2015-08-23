@@ -4,6 +4,7 @@
 [core]
 	editor = vi
 	excludesfile = ~/.gitignore_global
+  # pager = cat
 [color]
 	ui = true
 	diff = auto
@@ -15,5 +16,7 @@
 	ci = commit
 	co = checkout
 	unstage = reset HEAD
+	tree = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  hash = log --pretty=format:'%h' -n 1
 [push]
 	default = current
