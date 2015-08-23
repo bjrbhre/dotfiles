@@ -21,6 +21,9 @@ alias lla="ls -la"
 alias lss="ls -hsS"
 alias ml="ls -ltr"
 
+# Make
+alias m='make'
+
 # VNC
 alias vnc="vncserver :$VNC_PORT -depth 16 -geometry $VNC_GEOMETRY" #-name $VNC_NAME"
 alias vnck="vncserver -kill :$VNC_PORT"
@@ -59,7 +62,7 @@ alias be='bundle exec'
 # Darwin specific
 if [ "$(uname)" = "Darwin" ];then
 	alias ls="ls -CFG"
-	alias md5sum='md5'
+	# alias md5sum='md5'
 fi
 
 ###########################################################################
