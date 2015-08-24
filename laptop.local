@@ -1,7 +1,5 @@
 #!/bin/sh
 
-brew install android-sdk
-brew install arp-scan
 brew install awscli
 brew install bash
 brew install boot2docker
@@ -15,51 +13,49 @@ brew install gcc
 brew install git
 brew install gnu-sed --with-default-names
 brew install go
-brew install gpg2
 brew install htop-osx
 brew install llvm
-brew install mongo
+brew install mongodb
 brew install ncdu
 brew install nginx
 brew install postgresql
+brew install postgis
 brew install pkg-config
 brew install python
 brew install python3
 brew install rabbitmq
-brew install ruby-build
 brew install sbt
 brew install terminal-notifier
 brew install tig
 brew install v8
+brew install vim
+brew install watch
 brew install wget
 
 brew tap caskroom/cask
 brew install brew-cask
 
 brew cask install alfred
-# brew cask install android-studio
 brew cask install appcleaner
+brew cask install balsamiq-mockups
 brew cask install box-sync
 brew cask install ccmenu
 brew cask install dashlane
-brew cask install deezer
 brew cask install dropbox
 brew cask install flash-player
 brew cask install google-chrome
 brew cask install google-drive
-# brew cask install google-web-designer
 brew cask install gopro-studio
-brew cask install hipchat
-brew cask install hubic
 brew cask install iterm2
 brew cask install java
 brew cask install keepassx
 brew cask install kaleidoscope
 brew cask install mailbox
 brew cask install menumeters
-brew cask install mou
 brew cask install onepassword
+brew cask install rubymotion
 brew cask install skype
+brew cask install slack
 brew cask install sublime-text
 brew cask install transmit
 brew cask install virtualbox
@@ -88,5 +84,3 @@ gem install genghisapp
 npm install -g bower
 npm install -g gulp
 npm install -g coffee-script
-brew cask install balsamiq-mockups
-brew install postgis
