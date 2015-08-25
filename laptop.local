@@ -33,6 +33,7 @@ brew install watch
 brew install wget
 
 brew tap caskroom/cask
+brew tap caskroom/versions
 brew install brew-cask
 
 brew cask install alfred
@@ -57,6 +58,7 @@ brew cask install rubymotion
 brew cask install skype
 brew cask install slack
 brew cask install sublime-text
+brew cask install sublime-text3
 brew cask install transmit
 brew cask install virtualbox
 
@@ -84,3 +86,4 @@ gem install genghisapp
 npm install -g bower
 npm install -g gulp
 npm install -g coffee-script
+npm install -g standard-format
