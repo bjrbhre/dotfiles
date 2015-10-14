@@ -126,7 +126,9 @@ alias gd='git diff'
 alias gf='git fetch'
 alias gc='git commit -v'
 alias gp='git push'
-alias gk='gitk --all 2>/dev/null'
+# gitk issue: see [here](http://comments.gmane.org/gmane.comp.version-control.git/278820)
+# alias gk='gitk --all 2>/dev/null'
+alias gk='LANG=C gitk --all 2>/dev/null'
 alias gx='gitx --all 2>/dev/null'
 alias gr='git remote -v'
 alias git-branch='git branch --no-color 2>/dev/null | grep "^*" | sed -e "s/^[* ] \(.*\)/\1/g"'
@@ -172,6 +174,23 @@ function mongoexport_wrapper {
 	db=$(echo $address | cut -d '/' -f 2-)
 	echo "[$0] exporting from [$address] with user [$user]"
 	mongoexport -u $user -p $password \
+		--host $host \
+		--db $db \
+		$@
+}
+
+function mongoimport_wrapper {
+	url=$1
+	shift
+
+	credentials=$(echo $url | cut -d '@' -f 1 | cut -d '/' -f 3)
+	user=$(echo $credentials | cut -d ':' -f 1)
+	password=$(echo $credentials | cut -d ':' -f 2-)
+	address=$(echo $url | cut -d '@' -f 2)
+	host=$(echo $address | cut -d '/' -f -1)
+	db=$(echo $address | cut -d '/' -f 2-)
+	echo "[$0] exporting from [$address] with user [$user]"
+	mongoimport -u $user -p $password \
 		--host $host \
 		--db $db \
 		$@
@@ -226,6 +245,7 @@ function redis_wrapper {
 ###########################################################################
 #                             Heroku specific                            ##
 ###########################################################################
+alias brake='bundle exec rake'
 alias hrake='heroku run bundle exec rake'
 
 ###########################################################################
