@@ -129,6 +129,7 @@ alias gp='git push'
 # gitk issue: see [here](http://comments.gmane.org/gmane.comp.version-control.git/278820)
 # alias gk='gitk --all 2>/dev/null'
 alias gk='LANG=C gitk --all 2>/dev/null'
+alias gtree='LANG=C gitk --all 2>/dev/null'
 alias gx='gitx --all 2>/dev/null'
 alias gr='git remote -v'
 alias git-branch='git branch --no-color 2>/dev/null | grep "^*" | sed -e "s/^[* ] \(.*\)/\1/g"'
