@@ -18,6 +18,7 @@ brew install htop-osx
 # brew install mongodb
 brew install ncdu
 # brew install nginx
+brew install nvm
 # brew install postgresql
 # brew install postgis
 # brew install pkg-config
@@ -41,7 +42,6 @@ brew cask install alfred
 brew cask install application-loader
 # brew cask install balsamiq-mockups
 brew cask install box-sync
-brew cask install ccmenu
 # brew cask install dashlane
 brew cask install dropbox
 brew cask install flash-player
@@ -55,7 +55,7 @@ brew cask install java
 # brew cask install macdown
 # brew cask install mailbox
 brew cask install menumeters
-brew cask install onepassword
+brew cask install 1password
 brew cask install rubymotion
 brew cask install skype
 brew cask install slack
