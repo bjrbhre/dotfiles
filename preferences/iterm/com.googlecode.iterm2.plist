@@ -860,49 +860,21 @@
 	<key>MaxVertically</key>
 	<false/>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/Documents/Dropbox/dotfiles/iterm_preferences</string>
+	<string>~/Documents/Dropbox/dotfiles/preferences/iterm</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
-	<string>{712, 448}</string>
+	<string>{712, 459}</string>
 	<key>NSQuotedKeystrokeBinding</key>
 	<string></string>
 	<key>NSRepeatCountBinding</key>
 	<string></string>
 	<key>NSScrollAnimationEnabled</key>
 	<false/>
-	<key>NSTableView Columns KeyBingingTable</key>
-	<array>
-		<data>
-		BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU1N0cmluZwGEhAhOU09iamVjdACF
-		hAErATCG
-		</data>
-		<string>198</string>
-		<data>
-		BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU1N0cmluZwGEhAhOU09iamVjdACF
-		hAErATGG
-		</data>
-		<string>302</string>
-	</array>
-	<key>NSTableView Hidden Columns KeyBingingTable</key>
-	<array/>
-	<key>NSTableView Sort Ordering KeyBingingTable</key>
-	<array/>
-	<key>NSToolbar Configuration com.apple.NSColorPanel</key>
-	<dict>
-		<key>TB Is Shown</key>
-		<integer>1</integer>
-	</dict>
-	<key>NSWindow Frame NSFontPanel</key>
-	<string>574 254 445 103 0 0 1280 777 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>280 198 924 485 0 0 1280 777 </string>
-	<key>NSWindow Frame SUStatusFrame</key>
-	<string>450 486 384 129 0 0 1280 777 </string>
+	<string>-613 -508 924 485 -613 -800 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>4 22 1276 755 0 0 1280 777 </string>
+	<string>-613 -778 1280 755 -613 -800 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>7 375 570 401 0 0 1280 777 </string>
-	<key>NSWindow Frame iTerm Window 2</key>
-	<string>1288 482 585 451 1280 -124 1920 1057 </string>
+	<string>-1916 22 1916 1035 -1920 0 1920 1057 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -1456,7 +1428,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>Monaco 11</string>
+			<string>Monaco 10</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
@@ -2359,9 +2331,9 @@
 		</dict>
 	</array>
 	<key>NoSyncTimeOfLastPromo</key>
-	<real>455012140.60663402</real>
+	<real>471198768.00488901</real>
 	<key>NoSyncTimeOfLastPromoDownload</key>
-	<real>471089798.64070898</real>
+	<real>473076999.75508797</real>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
 	<key>OpenArrangementAtStartup</key>
@@ -2410,7 +2382,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/bjrbhre/Documents/Dropbox/dotfiles/iterm_preferences</string>
+	<string>/Users/bjrbhre/Documents/Dropbox/dotfiles/preferences/iterm</string>
 	<key>PromptOnQuit</key>
 	<true/>
 	<key>QuitWhenAllWindowsClosed</key>
@@ -2426,7 +2398,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2015-12-06T10:16:37Z</date>
+	<date>2015-12-29T10:16:38Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>
