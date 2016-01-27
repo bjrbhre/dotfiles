@@ -2,32 +2,33 @@
 
 brew install awscli
 brew install bash
-# brew install boot2docker
-# brew install cassandra
 brew install direnv
-# brew install docker
+brew install docker
+brew install docker-compose
+brew install docker-machine
 brew install dos2unix
 # brew install exiftool
 # brew install fig
 # brew install gcc
 brew install git
 brew install gnu-sed --with-default-names
-# brew install go
 brew install htop-osx
+brew install jq
 # brew install llvm
-# brew install mongodb
+brew install libxml2
+brew install libxslt
+brew install mongodb
 brew install ncdu
 # brew install nginx
 brew install nvm
-# brew install postgresql
-# brew install postgis
 # brew install pkg-config
 brew install python
 brew install python3
-# brew install rabbitmq
+brew install rabbitmq
 # brew install sbt
 # brew install terminal-notifier
 brew install tig
+brew install tree
 brew install v8
 brew install vim
 brew install watch
@@ -40,29 +41,25 @@ brew install brew-cask
 brew cask install alfred
 # brew cask install appcleaner
 brew cask install application-loader
-# brew cask install balsamiq-mockups
 brew cask install box-sync
-# brew cask install dashlane
+brew cask install caffeine
+brew cask install charles
 brew cask install dropbox
 brew cask install flash-player
 brew cask install google-chrome
-# brew cask install google-drive
-# brew cask install gopro-studio
+brew cask install istat-menus
 brew cask install iterm2
 brew cask install java
-# brew cask install keepassx
 # brew cask install kaleidoscope
-# brew cask install macdown
-# brew cask install mailbox
+brew cask install macdown
 brew cask install menumeters
 brew cask install 1password
 brew cask install rubymotion
 brew cask install skype
 brew cask install slack
-# brew cask install sublime-text
 brew cask install sublime-text3
 # brew cask install transmit
-# brew cask install virtualbox
+brew cask install virtualbox
 
 # python
 pip install virtualenv
