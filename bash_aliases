@@ -59,6 +59,9 @@ alias venv='source venv/bin/activate'
 # ruby
 alias be='bundle exec'
 
+# chrome
+alias chr='open -a Google\ Chrome --args --disable-web-security'
+
 # Darwin specific
 if [ "$(uname)" = "Darwin" ];then
 	alias ls="ls -CFG"
