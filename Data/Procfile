@@ -1,0 +1,6 @@
+mongo: mongod --dbpath $MONGO_DBPATH
+# mongo_debug: mongod --dbpath $MONGO_DBPATH --profile=2
+pg: postgres -D $POSTGRES_DIR
+redis: redis-server
+rabbit: rabbitmq-server
+nginx: nginx -c ~/Coding/bjrbhre/nginx_configuration/nginx/nginx.conf -g 'daemon off;'
