@@ -137,6 +137,7 @@ alias gx='gitx --all 2>/dev/null'
 alias gr='git remote -v'
 alias git-branch='git branch --no-color 2>/dev/null | grep "^*" | sed -e "s/^[* ] \(.*\)/\1/g"'
 alias git-tag='git describe --tags'
+alias gfa='for r in $(git remote);do git fetch -p $r;done'
 
 function parse_git_branch_and_add_brackets {
   #git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.\)/\[\1\]/'
