@@ -121,7 +121,7 @@ alias dr='docker run --rm -t -i $(repo)'
 ###########################################################################
 #                             Git specific                               ##
 ###########################################################################
-alias repo='echo "$GITHUB_USER/$(basename $(pwd))"'
+alias repo='echo "$GITHUB_USERNAME/$(basename $(pwd))"'
 alias gb='git branch'
 alias gba='git branch -a'
 alias gst='git status'
@@ -137,7 +137,8 @@ alias gx='gitx --all 2>/dev/null'
 alias gr='git remote -v'
 alias git-branch='git branch --no-color 2>/dev/null | grep "^*" | sed -e "s/^[* ] \(.*\)/\1/g"'
 alias git-tag='git describe --tags'
-alias gfa='for r in $(git remote);do git fetch -p $r;done'
+alias gfa='for r in $(git remote);do git fetch -v -p $r;done'
+alias gfa_and_tree='for d in $(find . -type d -maxdepth 1 |grep -v "^.$");do echo "========== $d";cd $d;gfa;gtree&;cd -;done'
 
 function parse_git_branch_and_add_brackets {
   #git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.\)/\[\1\]/'
@@ -147,6 +148,21 @@ function parse_git_branch_and_add_brackets {
   then
   	echo "[${branch}][${tag}]"
   fi
+}
+
+
+###########################################################################
+#                                 GitHub                                ##
+###########################################################################
+function gh_count_issues {
+  repo=$1
+  labels=$2
+
+  GITHUB_API_URL='https://api.github.com'
+  curl -H "Authorization: token $GITHUB_TOKEN" \
+    "$GITHUB_API_URL/repos/$repo/issues?page=1&per_page=100&state=open&labels=$labels" \
+    2>/dev/null \
+    | jq '. | length'
 }
 
 ###########################################################################
