@@ -171,6 +171,12 @@ function parse_git_branch_and_add_brackets {
 ###########################################################################
 #                                 GitHub                                ##
 ###########################################################################
+function gh_api {
+  GITHUB_API_URL='https://api.github.com'
+  curl -H "Authorization: token $GITHUB_TOKEN" \
+    "$GITHUB_API_URL$@"
+}
+
 function gh_count_issues {
   repo=$1
   labels=$2
