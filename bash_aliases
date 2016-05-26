@@ -198,12 +198,14 @@ function md {
 
 function mongo_wrapper {
 	url=$1
+  shift
+
 	credentials=$(echo $url | cut -d '@' -f 1 | cut -d '/' -f 3)
 	user=$(echo $credentials | cut -d ':' -f 1)
 	password=$(echo $credentials | cut -d ':' -f 2-)
 	address=$(echo $url | cut -d '@' -f 2)
 	echo "[$0] connecting to [$address] with user [$user]"
-	mongo -u $user -p $password $address
+	mongo -u $user -p $password $address $@
 }
 
 function mongoexport_wrapper {
