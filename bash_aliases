@@ -288,6 +288,22 @@ function redis_wrapper {
 	redis-cli -h $host -p $port -a $password
 }
 
+function psql_wrapper {
+	url=$1
+  shift
+
+	credentials=$(echo $url | cut -d '@' -f 1 | cut -d '/' -f 3)
+	user=$(echo $credentials | cut -d ':' -f 1)
+	password=$(echo $credentials | cut -d ':' -f 2-)
+	address=$(echo $url | cut -d '@' -f 2)
+	host=$(echo $address | cut -d ':' -f 1)
+	port_and_db=$(echo $address | cut -d ':' -f 2-)
+  port=$(echo $port_and_db | cut -d '/' -f 1)
+  db=$(echo $port_and_db | cut -d '/' -f 2)
+	echo "[$0] connecting to [$address] with user [$user]"
+	PGPASSWORD=$password psql -h $host -p $port -U $user -d $db $@
+}
+
 ###########################################################################
 #                             Heroku specific                            ##
 ###########################################################################
