@@ -85,6 +85,22 @@ fancy_echo() {
   printf "%b" "$1"
 }
 
+function shrink_pdf {
+  input=$1
+  output=$2
+  if [ -z "$output" ]; then output='-';fi
+
+  gs \
+    -sDEVICE=pdfwrite \
+    -dCompatibilityLevel=1.4 \
+    -dPDFSETTINGS=/ebook \
+    -dNOPAUSE \
+    -dQUIET \
+    -dBATCH \
+    -sOutputFile=$output \
+    $input
+}
+
 test_command() {
   type $1 1>/dev/null 2>&1 || { echo >&2 "No such file [ $1 ]"; exit 1; }
 }
