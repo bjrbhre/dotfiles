@@ -155,6 +155,7 @@ alias git-branch='git branch --no-color 2>/dev/null | grep "^*" | sed -e "s/^[* 
 alias git-tag='git describe --tags'
 alias gfa='for r in $(git remote);do git fetch -v -p $r;done'
 alias gfa_and_tree='for d in $(find . -type d -maxdepth 1 |grep -v "^.$");do echo "========== $d";cd $d;gfa;gt&;cd -;done'
+alias ghb='open https://github.com/$(git remote get-url origin |cut -d ":" -f 2|sed -e "s:\.git:/branches/all:g")'
 
 function parse_git_branch_and_add_brackets {
   #git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.\)/\[\1\]/'
