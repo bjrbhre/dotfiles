@@ -148,13 +148,13 @@ alias gp='git push'
 # gitk issue: see [here](http://comments.gmane.org/gmane.comp.version-control.git/278820)
 # alias gk='gitk --all 2>/dev/null'
 alias gk='LANG=C gitk --all 2>/dev/null'
-alias gtree='LANG=C gitk --all 2>/dev/null'
+alias gt='LANG=C gitk --all 2>/dev/null'
 alias gx='gitx --all 2>/dev/null'
 alias gr='git remote -v'
 alias git-branch='git branch --no-color 2>/dev/null | grep "^*" | sed -e "s/^[* ] \(.*\)/\1/g"'
 alias git-tag='git describe --tags'
 alias gfa='for r in $(git remote);do git fetch -v -p $r;done'
-alias gfa_and_tree='for d in $(find . -type d -maxdepth 1 |grep -v "^.$");do echo "========== $d";cd $d;gfa;gtree&;cd -;done'
+alias gfa_and_tree='for d in $(find . -type d -maxdepth 1 |grep -v "^.$");do echo "========== $d";cd $d;gfa;gt&;cd -;done'
 
 function parse_git_branch_and_add_brackets {
   #git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.\)/\[\1\]/'
