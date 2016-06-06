@@ -2,7 +2,7 @@
 
 brew install awscli
 brew install bash
-brew install cloc
+# brew install cloc
 brew install direnv
 brew install docker
 brew install docker-compose
@@ -21,7 +21,7 @@ brew install jq
 brew install libxml2
 brew install libxslt
 brew install libiconv
-brew install mboxgrep
+# brew install mboxgrep
 brew install mongodb
 brew install ncdu
 # brew install nginx
@@ -44,27 +44,27 @@ brew tap caskroom/versions
 brew install brew-cask
 
 brew cask install alfred
-brew cask install amazon-cloud-drive
+# brew cask install amazon-cloud-drive
 # brew cask install appcleaner
 brew cask install application-loader
 brew cask install box-sync
 brew cask install caffeine
-brew cask install charles
+# brew cask install charles
 brew cask install dropbox
-brew cask install expandrive
+# brew cask install expandrive
 brew cask install flash-player
 brew cask install google-chrome
-brew cask install google-photos-backup
+# brew cask install google-photos-backup
 brew cask install istat-menus
 brew cask install iterm2
 brew cask install java
 # brew cask install kaleidoscope
 brew cask install kitematic
-brew cask install macdown
-brew cask install menumeters
+# brew cask install macdown
+# brew cask install menumeters
 brew cask install 1password
-brew cask install rubymotion
-brew cask install skype
+# brew cask install rubymotion
+# brew cask install skype
 brew cask install slack
 brew cask install sublime-text3
 # brew cask install transmit
@@ -75,7 +75,7 @@ pip install virtualenv
 # virtualenv ~/.venv/dev
 # source ~/.venv/dev/bin/activate
 
-pip install ipython
+# pip install ipython
 # pip install nose
 # pip install nosegrowl2
 # pip install pep8
