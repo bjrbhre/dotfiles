@@ -94,5 +94,5 @@ pip install virtualenv
 # npm install -g bower
 # npm install -g gulp
 # npm install -g coffee-script
-npm install -g standard-format
-npm install -g standard
+# npm install -g standard-format
+# npm install -g standard
