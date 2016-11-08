@@ -8,10 +8,10 @@
 Dowload and execute:
 
 ```
-curl -s https://raw.githubusercontent.com/bjrbhre/dotfiles/master/install.sh | bash
+curl --remote-name https://raw.githubusercontent.com/bjrbhre/dotfiles/master/install.sh
+vi install.sh
+bash install.sh
 ```
-
-TODO use token for private repo access (see [here](https://gist.github.com/Integralist/9482061))
 
 What is does:
 
@@ -20,52 +20,18 @@ What is does:
 3. install sofware using [laptop.sh](https://github.com/thoughtbot/laptop)
 4. create ssh key
 
-### 2. AppStore
+### 2. Binaries & Applications install
 
-Following apps can only be downloaded through Mac AppStore:
+Laptop script will run commands listed in `~/.laptop.local`.
+Edit its content to fit your requirements.
 
-+ double pane
-+ broom
-+ spacie
-+ twitter
-+ growl
-
-Install with brew and use [mas-cli](https://github.com/mas-cli/mas) to install Mac App Store apps from command line.
-
+Typically, `.laptop.local` will install:
+- brew binaries using `brew install ...`
+- brew cask apps using `brew cask install ...`
+- Mac AppStore apps using `mas install ...`
 
 ### 3. Settings
 
-Following settings must be set manually:
+Currently, additional settings are done manually (e.g. configure MacOS preferences).
+See file `preferences/README.md`.
 
-+ install sublimetext package manager see [here](https://sublime.wbond.net/installation) and install
-  + CoffeeScript
-  + Dockerfile Syntax Highlighting
-+ change sublimetext icns [here](http://code.tutsplus.com/tutorials/sublime-text-2-tips-and-tricks-updated--net-21519)
-+ add sublime text preferences:
-  + "ensure_newline_at_eof_on_save": true
-  + "trim_trailing_white_space_on_save": true
-+ iterm mapping for 'option+left/right' [here](https://coderwall.com/p/h6yfda)
-+ set name / hostname (in settings)
-+ deactivate timemachine
-+ configure trackpad
-+ configure active corners :
-  + TL: mission control
-  + BL: application windows
-  + TR: notifications
-  + BR: desktop
-+ finder preferences (barre latérale, chemin d'accès)
-+ dock preferences and dock contents
-+ deactive guest account
-+ account profile picture
-+ time format for clock
-+ internet accounts:
-  + google
-  + twitter
-  + facebook
-  + linkedin
-
-## TODO
-
-+ Script settings using `defaults write...`
-+ Use rcm to manage dotfiles?
-+ Fix config.env when rbenv not installed
