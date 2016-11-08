@@ -54,7 +54,7 @@ brew cask install alfred
 brew cask install caffeine
 # brew cask install charles
 brew cask install dropbox
-brew cask install flash-player
+# brew cask install flash-player
 brew cask install google-chrome
 brew cask install google-photos-backup
 brew cask install istat-menus
