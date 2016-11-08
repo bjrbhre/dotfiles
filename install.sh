@@ -59,3 +59,7 @@ fi
 fancy_echo "Checking ssh key [ $SSH_KEY ]... "
 [ -f $SSH_KEY ] && echo "OK" || ssh-keygen -f $SSH_KEY -N "" -C "$EMAIL"
 
+SSH_PEM=$SSH_KEY.pub.pem
+fancy_echo "Checking ssh public key [ $SSH_PEM ]... "
+[ -f $SSH_PEM ] && echo "OK" || openssl rsa -in $SSH_KEY -pubout -out $SSH_PEM
+
