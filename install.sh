@@ -53,6 +53,7 @@ fancy_echo "Linking dotfiles... "
 if [ "$(uname)" = "Darwin" ];then
   curl --remote-name "https://raw.githubusercontent.com/thoughtbot/laptop/master/mac"
   vi mac
+  [ -e ~/.laptop.local ] && vi ~/.laptop.local
   sh mac 2>&1 | tee ~/laptop.log
 else
   bash <(wget -qO- "https://raw.githubusercontent.com/thoughtbot/laptop/master/linux") 2>&1 | tee ~/laptop.log
