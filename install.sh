@@ -44,6 +44,8 @@ fancy_echo "Checking oh-my-zsh directory [ $OH_MY_ZSH_DIR ]..."
 [ -d $OH_MY_ZSH_DIR ] && echo "OK" || git clone $OH_MY_ZSH_REPO $OH_MY_ZSH_DIR
 fancy_echo "Checking dotfiles directory [ $DOTFILES ]..."
 [ -d $DOTFILES ] && echo "OK" || git clone $DOTFILES_REPO $DOTFILES
+fancy_echo "Updating dotfiles directory [ $DOTFILES ]..."
+cd $DOTFILES && git pull; cd -
 fancy_echo "Linking dotfiles... "
 [ -x $DOTFILES/link.sh ] && $DOTFILES/link.sh && echo "OK"
 
