@@ -45,7 +45,6 @@ brew install wget
 #================ BREW CASK =============#
 brew tap caskroom/cask
 brew tap caskroom/versions
-brew install brew-cask
 
 brew cask install 1password
 brew cask install alfred
