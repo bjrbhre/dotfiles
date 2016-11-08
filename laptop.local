@@ -71,6 +71,10 @@ brew cask install sublime-text
 # brew cask install transmit
 # brew cask install virtualbox
 
+#=============== Cleaning Up ============#
+brew cleanup
+brew cask cleanup
+
 #================ APP STORE =============#
 mas install 457404252 # Broom
 mas install 409737246 # DoublePane
