@@ -30,6 +30,8 @@ Following apps can only be downloaded through Mac AppStore:
 + twitter
 + growl
 
+Install with brew and use [mas-cli](https://github.com/mas-cli/mas) to install Mac App Store apps from command line.
+
 
 ### 3. Settings
 

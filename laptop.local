@@ -1,28 +1,31 @@
 #!/bin/sh
 
+#================== BREW ===============#
 brew install awscli
 brew install bash
 # brew install cloc
 brew install direnv
-brew install docker
-brew install docker-compose
-brew install docker-machine
+# brew install docker
+# brew install docker-compose
+# brew install docker-machine
 brew install dos2unix
 brew install exiftool
-# brew install fig
 brew install forego
 # brew install gcc
-brew install git
+# brew install git # installed by laptop.sh
 brew install gnu-sed --with-default-names
 brew install gs
+# brew install heroku # installed by laptop.sh
 brew install htop-osx
+# brew install imagemagick # installed by laptop.sh
 brew install jq
 # brew install llvm
 brew install libxml2
 brew install libxslt
-brew install libiconv
+brew install libyaml # installed by laptop.sh
+brew install mas
 # brew install mboxgrep
-brew install mongodb
+# brew install mongodb
 brew install ncdu
 # brew install nginx
 brew install nvm
@@ -35,43 +38,52 @@ brew install rabbitmq
 brew install tig
 brew install tree
 brew install v8
-brew install vim
+# brew install vim # installed by laptop.sh
 brew install watch
 brew install wget
 
+#================ BREW CASK =============#
 brew tap caskroom/cask
 brew tap caskroom/versions
 brew install brew-cask
 
+brew cask install 1password
 brew cask install alfred
-# brew cask install amazon-cloud-drive
 # brew cask install appcleaner
-brew cask install application-loader
-brew cask install box-sync
+# brew cask install application-loader
+# brew cask install box-sync
 brew cask install caffeine
 # brew cask install charles
 brew cask install dropbox
-# brew cask install expandrive
 brew cask install flash-player
 brew cask install google-chrome
-# brew cask install google-photos-backup
+brew cask install google-photos-backup
 brew cask install istat-menus
 brew cask install iterm2
 brew cask install java
 # brew cask install kaleidoscope
-brew cask install kitematic
+# brew cask install kitematic
 # brew cask install macdown
-# brew cask install menumeters
-brew cask install 1password
 # brew cask install rubymotion
-# brew cask install skype
+brew cask install skype
 brew cask install slack
-brew cask install sublime-text3
+brew cask install sublime-text
 # brew cask install transmit
-brew cask install virtualbox
+# brew cask install virtualbox
 
+#================ APP STORE =============#
+mas install 457404252 # Broom
+mas install 409737246 # DoublePane
+mas install 445413014 # Spacie
+mas install 497799835 # Xcode
+# mas install 409183694 # Keynote
+# mas install 409203825 # Numbers
+# mas install 409201541 # Pages
+# mas install 603117688 # CCMenu
+
+#================ PYTHON  =============#
 # python
-pip install virtualenv
+pip3 install virtualenv
 # virtualenv ~/.venv/dev
 # source ~/.venv/dev/bin/activate
 
@@ -87,9 +99,11 @@ pip install virtualenv
 
 # deactivate # virtualenv
 
+#================ RUBY  =============#
 # gem
 # gem install genghisapp
 
+#================ NODE  =============#
 # bower
 # npm install -g bower
 # npm install -g gulp
