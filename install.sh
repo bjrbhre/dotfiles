@@ -49,7 +49,9 @@ fancy_echo "Linking dotfiles... "
 
 # 3. install software using laptop.sh
 if [ "$(uname)" = "Darwin" ];then
-  bash <(curl -s "https://raw.githubusercontent.com/thoughtbot/laptop/master/mac") 2>&1 | tee ~/laptop.log
+  curl --remote-name "https://raw.githubusercontent.com/thoughtbot/laptop/master/mac"
+  vi mac
+  sh mac 2>&1 | tee ~/laptop.log
 else
   bash <(wget -qO- "https://raw.githubusercontent.com/thoughtbot/laptop/master/linux") 2>&1 | tee ~/laptop.log
 fi
