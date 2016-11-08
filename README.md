@@ -8,7 +8,7 @@
 Dowload and execute:
 
 ```
-curl -s https://raw.githubusercontent.com/bjrbhre/dotfiles/master/install.sh | sh
+curl -s https://raw.githubusercontent.com/bjrbhre/dotfiles/master/install.sh | bash
 ```
 
 TODO use token for private repo access (see [here](https://gist.github.com/Integralist/9482061))

@@ -8,8 +8,6 @@ DOTFILES=$HOME/.dotfiles
 SSH_KEY=$HOME/.ssh/id_rsa
 #==== END OF SETTINGS ===#
 
-set -e
-
 #======== HELPERS =======#
 fancy_echo() {
   printf "%b" "$1"
@@ -19,6 +17,8 @@ test_command() {
   type $1 1>/dev/null 2>&1 || { echo >&2 "No such file [ $1 ]"; exit 1; }
 }
 #=======================#
+
+# set -e # error mode causes failure is there is no software update
 
 # 1. sytem update
 fancy_echo "Updating system software...\n"
@@ -49,9 +49,9 @@ fancy_echo "Linking dotfiles... "
 
 # 3. install software using laptop.sh
 if [ "$(uname)" = "Darwin" ];then
-  bash <(curl -s https://raw.githubusercontent.com/thoughtbot/laptop/master/mac) 2>&1 | tee ~/laptop.log
+  bash <(curl -s "https://raw.githubusercontent.com/thoughtbot/laptop/master/mac") 2>&1 | tee ~/laptop.log
 else
-  bash <(wget -qO- https://raw.githubusercontent.com/thoughtbot/laptop/master/linux) 2>&1 | tee ~/laptop.log
+  bash <(wget -qO- "https://raw.githubusercontent.com/thoughtbot/laptop/master/linux") 2>&1 | tee ~/laptop.log
 fi
 
 # generate SSH_KEY (and source user.env to set $EMAIL)
