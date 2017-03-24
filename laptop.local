@@ -113,3 +113,6 @@ pip3 install virtualenv
 # npm install -g coffee-script
 # npm install -g standard-format
 # npm install -g standard
+
+#============= VIM ==================#
+git clone https://github.com/amix/vimrc.git ~/.vim_runtime
