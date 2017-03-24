@@ -17,6 +17,6 @@
 	co = checkout
 	unstage = reset HEAD
 	tree = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-  hash = log --pretty=format:'%h' -n 1
+	hash = log --pretty=format:'%h' -n 1
 [push]
 	default = current
