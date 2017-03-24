@@ -859,14 +859,10 @@
 	<true/>
 	<key>MaxVertically</key>
 	<false/>
-	<key>NSColorPanelMode</key>
-	<string>1</string>
-	<key>NSColorPickerSlidersDefaults</key>
-	<string>1</string>
 	<key>NSNavLastRootDirectory</key>
 	<string>~/Documents/Dropbox/dotfiles/preferences/iterm</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
-	<string>{712, 459}</string>
+	<string>{712, 448}</string>
 	<key>NSQuotedKeystrokeBinding</key>
 	<string></string>
 	<key>NSRepeatCountBinding</key>
@@ -904,17 +900,15 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame Preferences</key>
-	<string>4 292 605 485 0 0 1280 777 </string>
+	<string>269 313 606 456 0 0 1280 777 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>332 288 620 392 0 0 1280 777 </string>
+	<string>292 116 700 622 0 0 1280 777 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>269 75 918 495 0 0 1280 777 </string>
+	<string>269 130 937 465 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>0 423 1280 354 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>4 386 490 377 0 0 1280 777 </string>
-	<key>NSWindow Frame iTerm Window 2</key>
-	<string>4 0 1276 777 0 0 1280 777 </string>
+	<string>4 8 1273 769 0 0 1280 777 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -3099,26 +3093,38 @@
 			<string>/Users/bjrbhre</string>
 		</dict>
 	</array>
-	<key>NoSyncDisablePromotions</key>
-	<true/>
-	<key>NoSyncHaveShownPromoWithId_4</key>
+	<key>NoSyncConfirmBeta</key>
 	<true/>
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
 	<key>NoSyncInstallationId</key>
-	<string>73CEDE1A-2764-4289-85B5-D4AFBB534571</string>
-	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
+	<string>22AA7D81-AAC5-471F-8338-984A0B29696C</string>
+	<key>NoSyncLastTipTime</key>
+	<real>488707112.72900403</real>
+	<key>NoSyncNeverAskAboutSettingAlternateMouseScroll</key>
 	<true/>
-	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
-	<integer>0</integer>
 	<key>NoSyncPermissionToShowTip</key>
-	<false/>
+	<true/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
-	<real>491549638.11221302</real>
+	<real>487151838.14474899</real>
 	<key>NoSyncTimeOfLastPromo</key>
-	<real>477581963.63954401</real>
+	<real>486915627.06445301</real>
 	<key>NoSyncTimeOfLastPromoDownload</key>
-	<real>477568888.79996198</real>
+	<real>487006725.66167003</real>
+	<key>NoSyncTipsDisabled</key>
+	<true/>
+	<key>NoSyncTipsToNotShow</key>
+	<array>
+		<string>000</string>
+		<string>0000</string>
+		<string>0001</string>
+		<string>0002</string>
+		<string>0003</string>
+		<string>0004</string>
+		<string>0005</string>
+		<string>0006</string>
+		<string>0007</string>
+	</array>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
 	<key>OpenArrangementAtStartup</key>
@@ -3167,7 +3173,9 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/bjrbhre/Documents/Dropbox/dotfiles/preferences/iterm</string>
+	<string>/Users/p.beauhaire/Documents/Dropbox/dotfiles/preferences/iterm</string>
+	<key>Print In Black And White</key>
+	<true/>
 	<key>PromptOnQuit</key>
 	<true/>
 	<key>QuitWhenAllWindowsClosed</key>
@@ -3181,14 +3189,16 @@
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/testing.xml?shard=38</string>
+	<string>https://iterm2.com/appcasts/testing.xml?shard=14</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-11-07T16:29:48Z</date>
+	<date>2017-01-24T09:30:49Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>
+	<false/>
+	<key>ShowFullScreenTabBar</key>
 	<false/>
 	<key>ShowPaneTitles</key>
 	<true/>
@@ -3231,7 +3241,7 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.0.12</string>
+	<string>3.0.13</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
