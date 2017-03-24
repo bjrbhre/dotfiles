@@ -38,6 +38,7 @@ Mac OS Preferences:
   - BL: application windows
   - TR: notifications
   - BR: desktop
+- [ ] Security & Privacy > General > Require password immediately
 - [ ] Keyboard:
   - add dvorak layout `sudo cp -R ~/.dotfiles/preferences/fr-dvorak-bepo.bundle /Library/Keyboard Layouts`
   - add layout and set keyboard shortcut
@@ -57,3 +58,5 @@ Finder Preferences:
 - [ ] Rearrange sidebar items
 - [ ] View > Show status bar & path bar
 
+Misc:
+- [ ] Install [adobe-fonts/source-code-pro](https://github.com/adobe-fonts/source-code-pro)
