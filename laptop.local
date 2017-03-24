@@ -43,6 +43,10 @@ brew install v8
 brew install watch
 brew install wget
 
+#================ BREW DUPES =============#
+brew tap homebrew/dupes
+brew install homebrew/dupes/openssh # See https://lists.mindrot.org/pipermail/openssh-unix-dev/2013-November/031799.html
+
 #================ BREW CASK =============#
 brew tap caskroom/cask
 brew tap caskroom/versions
