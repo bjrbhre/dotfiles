@@ -17,6 +17,7 @@ brew install gnu-sed --with-default-names
 brew install gs
 # brew install heroku # installed by laptop.sh
 brew install htop-osx
+brew install httpie
 # brew install imagemagick # installed by laptop.sh
 brew install jq
 # brew install llvm
