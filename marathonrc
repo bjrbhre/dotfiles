@@ -1,0 +1,10 @@
+[ -z "$MARATHON_URL" ] && echo "WARNING Missing ENV variable: MARATHON_URL"
+ 
+echo -n "User: "
+read MARATHON_USER
+export MARATHON_USER
+
+echo -n "Password: "
+read -s MARATHON_PASSWORD
+export MARATHON_PASSWORD
+echo ""
