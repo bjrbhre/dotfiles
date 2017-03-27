@@ -10,11 +10,11 @@ brew install direnv
 # brew install docker-machine
 brew install dos2unix
 brew install exiftool
-brew install forego
+# brew install forego
 # brew install gcc
 # brew install git # installed by laptop.sh
 brew install gnu-sed --with-default-names
-brew install gs
+# brew install gs
 # brew install heroku # installed by laptop.sh
 brew install htop-osx
 brew install httpie
@@ -23,7 +23,7 @@ brew install jq
 # brew install llvm
 brew install libxml2
 brew install libxslt
-brew install libyaml # installed by laptop.sh
+# brew install libyaml # installed by laptop.sh
 brew install mas
 # brew install mboxgrep
 # brew install mongodb
@@ -31,9 +31,9 @@ brew install ncdu
 # brew install nginx
 brew install nvm
 # brew install pkg-config
-brew install python
+# brew install python
 brew install python3
-brew install rabbitmq
+# brew install rabbitmq
 # brew install sbt
 # brew install terminal-notifier
 brew install tig
@@ -60,17 +60,17 @@ brew cask install caffeine
 # brew cask install charles
 brew cask install dropbox
 # brew cask install flash-player
-brew cask install google-chrome
-brew cask install google-photos-backup
+# brew cask install google-chrome
+# brew cask install google-photos-backup
 brew cask install istat-menus
 brew cask install iterm2
-brew cask install java
+# brew cask install java
 # brew cask install kaleidoscope
 # brew cask install kitematic
 # brew cask install macdown
 # brew cask install rubymotion
-brew cask install skype
-brew cask install slack
+# brew cask install skype
+# brew cask install slack
 brew cask install sublime-text
 # brew cask install transmit
 # brew cask install virtualbox
@@ -119,5 +119,3 @@ pip3 install virtualenv
 # npm install -g standard-format
 # npm install -g standard
 
-#============= VIM ==================#
-git clone https://github.com/amix/vimrc.git ~/.vim_runtime
