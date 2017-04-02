@@ -1,6 +1,5 @@
 [user]
 	name = Pierre Beauhaire
-	email = bjr@bhre.me
 [core]
 	editor = vi
 	excludesfile = ~/.gitignore_global
