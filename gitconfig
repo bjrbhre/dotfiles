@@ -1,7 +1,7 @@
 [user]
 	name = Pierre Beauhaire
 [core]
-	editor = vi
+	editor = vim
 	excludesfile = ~/.gitignore_global
   # pager = cat
 [color]
