@@ -26,7 +26,11 @@ Currently, some settings (e.g. MacOS preferences) are set manually.
   - [ ] Saas
 
 Mac OS Preferences:
-- [ ] Display preferences > unselect "show mirroring options..."
+- [ ] Keyboard Shortcurts
+  - [ ] Remove Mission control / Application Windows / Show spotlight search
+- [ ] Display preferences
+ - [ ] unselect "show mirroring options..."
+ - [ ] Night shift
 - [ ] Never start screen saver
 - [ ] Dock: small / left / automatically hide
 - [ ] Remove Dock content
